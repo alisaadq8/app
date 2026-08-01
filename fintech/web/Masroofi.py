@@ -304,7 +304,7 @@ def page_home():
     with c1:
         age = st.number_input("العمر:", min_value=4, max_value=16, value=int(st.session_state.age), step=1, key="home_age")
     with c2:
-        allowance = st.number_input("المصروف (بالريال):", min_value=0.0, step=1.0, value=float(st.session_state.allowance), key="home_allow")
+        allowance = st.number_input("المصروف (بالدينار):", min_value=0.0, step=1.0, value=float(st.session_state.allowance), key="home_allow")
     c3,c4 = st.columns(2)
     with c3:
         cycle = st.radio("المتابعة:", ["Weekly","Monthly"], index=0 if st.session_state.cycle=="Weekly" else 1, horizontal=True, key="home_cycle")
